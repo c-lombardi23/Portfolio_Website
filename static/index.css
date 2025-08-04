@@ -1,0 +1,16 @@
+
+.jumbotron {
+    text-align: center;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(228, 226, 226);
+    padding-bottom: 1%;
+}
+
+#subheader {
+    color: black;
+    text-align: center;
+}
+.container {
+    padding-top: 5%;
+}
