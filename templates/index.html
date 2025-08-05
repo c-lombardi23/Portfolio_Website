@@ -108,23 +108,22 @@
     </div>
 </section>
 
-<!-- Contact Section -->
 <section id="contact" class="py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-5">Contact Me</h2>
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <form>
+                <form action="{{url_for('contact')}}" method="POST">
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Your Name">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Your Email">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        <textarea class="form-control" rows="5" name="message" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    <button type="submit" id="submitBtn" class="btn btn-primary w-100">Send Message</button>
                 </form>
             </div>
         </div>

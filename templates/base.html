@@ -11,29 +11,30 @@
     <title>Christopher J. Lombardi</title>
     {% block head %}{% endblock %}
 </head>
+{% set on_index = request.path == '/' %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Christopher Lombardi</a>
+        <a class="navbar-brand" href="{% if on_index %}#home{% else %}{{url_for('index')}}#home{% endif %}">Christopher Lombardi</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="{% if on_index %}#home{% else %}{{url_for('index')}}#home{% endif %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#features">About</a>
+                    <a class="nav-link" href="{% if on_index %}#features{% else %}{{url_for('about')}}#features{% endif %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">Projects</a>
+                    <a class="nav-link" href="{% if on_index %}#about{% else %}{{url_for('portfolio')}}#about{% endif %}">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#testimonials">Resume</a>
+                    <a class="nav-link" href="{{url_for('resume')}}">Resume</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="{{url_for('index')}}">Contact</a>
                 </li>
             </ul>
         </div>
@@ -42,8 +43,6 @@
 
 {% block content %}{% endblock %}
 
-
-<!-- Footer -->
 <footer class="bg-dark text-light py-4">
     <div class="container">
         <div class="row">

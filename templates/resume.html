@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='resume.css')}}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5 p-4 bg-white rounded shadow-sm" style="max-width: 900px;">
+  <header class="mb-4">
+    <h1 class="display-4">Christopher J. Lombardi</h1>
+    <p class="text-muted">
+      Newark, NJ 07103 | <a href="mailto:cjl78@njit.edu">cjl78@njit.edu</a> | 862-354-3910<br>
+      <a href="https://github.com/c-lombardi23" target="_blank">c-lombardi23</a> | <a href="https://linkedin.com/in/chrisjameslombardi" target="_blank">chrisjameslombardi</a>
+    </p>
+  </header>
+
+  <section class="mb-4">
+    <h2>Summary</h2>
+    <p>Applied Physics and Computer Science student specializing in building machine learning solutions for complex physical systems. My background in data-driven modeling and simulation allows me to bridge the gap between real-world phenomena and predictive algorithms. Seeking a challenging role in data science or machine learning engineering.</p>
+  </section>
+
+  <section class="mb-4">
+    <h2>Education</h2>
+    <ul class="list-unstyled">
+      <li>
+        <strong>BS Applied Physics and Computer Science</strong><br>
+        New Jersey Institute of Technology, Aug 2023 – Present<br>
+        GPA: 3.93 / 4.0
+      </li>
+      <li class="mt-3">
+        <strong>AS Physics</strong><br>
+        Essex County College, Sept 2022 – Aug 2023<br>
+        GPA: 4.0 / 4.0
+      </li>
+    </ul>
+  </section>
+
+  <section class="mb-4">
+    <h2>Honors and Awards</h2>
+    <ul>
+      <li>Undergraduate Student of the Year, NJIT Department of Physics, Spring 2025</li>
+    </ul>
+  </section>
+
+  <section class="mb-4">
+    <h2>Experience</h2>
+    <div>
+      <h5>Thorlabs Vytran Division, Research Intern</h5>
+      <p class="text-muted">Morganville, NJ — May 2025 – August 2025</p>
+      <ul>
+        <li>Designed an end-to-end machine learning model to classify fiber cleave images and predict optimal parameters for 5 fiber types.</li>
+        <li>Engineered a custom CNN model head on a pre-trained EfficientNet backbone, leveraging transfer learning to achieve over 90% accuracy and 88% F1 score on an unbalanced dataset.</li>
+        <li>Built and integrated an XGBoost regression model to predict precise tension adjustments, providing actionable feedback to operators.</li>
+      </ul>
+    </div>
+
+    <div class="mt-3">
+      <h5>ISWS REU Program, Research Intern</h5>
+      <p class="text-muted">Newark, NJ — May 2024 – July 2024</p>
+      <ul>
+        <li>One of 8 students selected to participate in NSF funded research.</li>
+        <li>Developed a Python-based pipeline to process and analyze time-series data for 8 stellar targets, authoring a paper on the subject.</li>
+      </ul>
+    </div>
+
+    <div class="mt-3">
+      <h5>New Jersey Institute of Technology, Physics Tutor</h5>
+      <p class="text-muted">Newark, NJ — Jan 2024 – Present</p>
+      <ul>
+        <li>Provide one-on-one and group tutoring sessions to undergraduate students, simplifying concepts and guiding problem solving.</li>
+      </ul>
+    </div>
+
+    <div class="mt-3">
+      <h5>New Jersey Institute of Technology, Research Assistant</h5>
+      <p class="text-muted">Newark, NJ — Aug 2023 – Present</p>
+      <ul>
+        <li>Analyzed Kepler mission light curves for 8 KIC stars, identifying and characterizing hundreds of stellar flare events for frequency analysis.</li>
+        <li>Presented findings at the URI Symposium for NJIT and the Cool Stars Conference.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mb-4">
+    <h2>Presentations and Publications</h2>
+    <ul>
+      <li>
+        <strong>Understanding the Sun’s Magnetic Cycle with COFFIES</strong>, American Astronomical Society Meeting, National Harbor, MD, Jan 2025
+      </li>
+      <li>
+        <strong>Temporal Variations in Asteroseismic Frequencies of KIC 6106415: Insights from GOLF and Kepler Observations</strong><br>
+        Submitted to AAS Journal<br>
+        <a href="https://arxiv.org/abs/2503.05076" target="_blank">arxiv.org/abs/2503.05076</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="mb-4">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <strong>Personal Training Website</strong><br>
+        Full-stack web app built with Python, CSS, HTML, JavaScript, SQLAlchemy<br>
+        <a href="https://github.com/c-lombardi23/new_fit_physicist" target="_blank">github.com/newfitphysicist</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="mb-4">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, C++, Java, SQL, C</li>
+      <li><strong>Machine Learning:</strong> Scikit-learn, TensorFlow, Pandas, NumPy, XGBoost, Matplotlib, Seaborn</li>
+      <li><strong>Developer Tools:</strong> Git, GitHub, Jupyter Notebooks, Linux, Bash Scripting</li>
+    </ul>
+  </section>
+</div>
+
+
+{% endblock %}
