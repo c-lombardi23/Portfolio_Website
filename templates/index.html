@@ -7,17 +7,128 @@
 
 {% block content %}
 
-    <div class="parallax-wrapper">
-    <img src="{{ url_for('static', filename='headshot.jpg') }}"
-         alt="Chris Lombardi Headshot"
-         class="headshot">
+    <!-- Hero Section -->
+<section id="home" class="hero-section d-flex align-items-center">
+    <div class="container text-center">
+        <h1 class="display-1 mb-4">Christopher J. Lombardi</h1>
+        <p class="lead mb-4">Applied Physics and Computer Science Graduate</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{url_for('about')}}" class="btn btn-primary btn-lg">About Me</a>
+            <a href="{{url_for('portfolio')}}" class="btn btn-primary btn-lg">Projects</a>
+        </div>
+    </div>
+</section>
 
-    <div class="parallax">
-    <div class="content">
-        <h1 class="animate__animated animate__fadeInDown">Welcome to My Portfolio Website</h1>
-        <p class="animate__animated animate__fadeInUp animate__delay-1s">Check Out My Personal Projects and Background.</p>
-        <button class="btn btn-primary btn-lg animate__animated animate__bounceIn animate__delay-2s">Learn More</button>
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Quick Background</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-rocket feature-icon"></i>
+                    <h3>NJIT Graduate</h3>
+                    <p>B.S. in Applied Physics/Computer Science</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Intern</h3>
+                    <p>ML Research Intern at THORLABS.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>Self-Taught</h3>
+                    <p>Quick Learner</p>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="static/headshot.jpg" alt="About Us" class="img-fluid rounded" width="400px">
+            </div>
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p class="lead">Passionate Physics and Computer Science graduate</p>
+                <p>Motivated Physics and Computer Science student at NJIT, driven to solve complex problems at 
+                    the intersection of physical modeling and data science. My background provides me with a unique 
+                    perspective to approach machine learning challenges, from developing algorithms to interpreting 
+                    large-scale data. I am actively seeking an opportunity to apply these skills to real-world problems.</p>
+                <button class="btn btn-primary">Learn More About Me</button>
+            </div>
+        </div>
     </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Featured Projects</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="static/machine_learning.png" class="testimonial-img mb-3" alt="Client 1">
+                        <p class="card-text">Machine learning pipeline for fiber optic cleaves</p>
+                        <h5 class="card-title">FOCAL</h5>
+                        <p class="card-subtitle text-muted">ML, Python, TensorFlow</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="static/atom_icon2.png" class="testimonial-img mb-3" alt="Client 2">
+                        <p class="card-text">Flask built dynamic blog website</p>
+                        <h5 class="card-title">Fitness Blog</h5>
+                        <p class="card-subtitle text-muted">Flask, Python, SQL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="static/astero.png" class="testimonial-img mb-3" alt="Client 3">
+                        <p class="card-text">Current research project on solar-type stars</p>
+                        <h5 class="card-title">Asteroseismology Research</h5>
+                        <p class="card-subtitle text-muted">Jupyter Notebooks, Physics, Python</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact Me</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
     
 {% endblock %}
