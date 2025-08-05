@@ -13,8 +13,8 @@
         <h1 class="display-1 mb-4">Christopher J. Lombardi</h1>
         <p class="lead mb-4">Applied Physics and Computer Science Graduate</p>
         <div class="d-flex justify-content-center gap-3">
-            <a href="{{url_for('about')}}" class="btn btn-primary btn-lg">About Me</a>
-            <a href="{{url_for('portfolio')}}" class="btn btn-primary btn-lg">Projects</a>
+            <a href="{{url_for('about')}}" class="about-btn btn btn-primary btn-lg">About Me</a>
+            <a href="{{url_for('portfolio')}}" class="project-btn btn btn-primary btn-lg">Projects</a>
         </div>
     </div>
 </section>
@@ -63,7 +63,7 @@
                     the intersection of physical modeling and data science. My background provides me with a unique 
                     perspective to approach machine learning challenges, from developing algorithms to interpreting 
                     large-scale data. I am actively seeking an opportunity to apply these skills to real-world problems.</p>
-                <button class="btn btn-primary">Learn More About Me</button>
+                <a class="about-me-btn btn btn-primary" href="{{url_for('about')}}">Learn More About Me</a>
             </div>
         </div>
     </div>
@@ -77,7 +77,9 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-body text-center">
+                        <a href="https://github.com/c-lombardi23/FOCAL">
                         <img src="static/machine_learning.png" class="testimonial-img mb-3" alt="Client 1">
+                        </a>
                         <p class="card-text">Machine learning pipeline for fiber optic cleaves</p>
                         <h5 class="card-title">FOCAL</h5>
                         <p class="card-subtitle text-muted">ML, Python, TensorFlow</p>
@@ -87,7 +89,9 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-body text-center">
+                        <a href="https://github.com/c-lombardi23/new_fit_physicist">
                         <img src="static/atom_icon2.png" class="testimonial-img mb-3" alt="Client 2">
+                        </a>
                         <p class="card-text">Flask built dynamic blog website</p>
                         <h5 class="card-title">Fitness Blog</h5>
                         <p class="card-subtitle text-muted">Flask, Python, SQL</p>
@@ -97,7 +101,9 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-body text-center">
+                        <a href="https://github.com/c-lombardi23/Asteroseismology">
                         <img src="static/astero.png" class="testimonial-img mb-3" alt="Client 3">
+                        </a>
                         <p class="card-text">Current research project on solar-type stars</p>
                         <h5 class="card-title">Asteroseismology Research</h5>
                         <p class="card-subtitle text-muted">Jupyter Notebooks, Physics, Python</p>
@@ -123,7 +129,7 @@
                     <div class="mb-3">
                         <textarea class="form-control" rows="5" name="message" placeholder="Your Message" required></textarea>
                     </div>
-                    <button type="submit" id="submitBtn" class="btn btn-primary w-100">Send Message</button>
+                    <button type="submit" id="submitBtn" class="message-btn btn btn-primary w-100">Send Message</button>
                 </form>
             </div>
         </div>

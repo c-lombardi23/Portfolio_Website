@@ -1,13 +1,3 @@
-.flash-message {
-  color: white;
-  background: transparent;
-  padding: 12px 20px;
-  margin-top: 100px;
-  border-radius: 5px;
-  font-weight: 500;
-  opacity: 1;
-  transition: opacity 1s ease-out;
-}
 
 .parallax {
     height: 100vh;
@@ -16,12 +6,99 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+nav p {
+    font-family: sans-serif;
+}
+nav li {
+    font-family: sans-serif;
+    color: white;
+}
+
+@font-face {
+    font-family: 'celinda';
+    src: url('fonts/Celinda-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'mileast';
+    src: url('fonts/Mileast.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'hurin';
+    src: url('fonts/HurinPersonalUseOnly-Regular.ttf') format('truetype');
+}
 
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url('/api/placeholder/1920/1080') center/cover no-repeat;
     height: 100vh;
     color: white;
+}
+.hero-section h1 {
+    font-weight: bold;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    font-family:'celinda', sans-serif;
+}
+
+.hero-section p {
+    font-family: 'hurin';
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+.hero-section a {
+    font-family: 'hurin';
+}
+
+.about-btn,
+.project-btn {
+    background-color: transparent;
+    border-color: white;
+}
+.about-btn:hover,
+.project-btn:hover {
+    background-color: white;
+    color: black;
+    border-color: white; /* optional, if you want the border to stay white */
+}
+
+#features h2,
+#about h2,
+#testimonials h2,
+#contact h2 {
+  font-family: 'mileast', sans-serif;
+}
+
+#features p,
+#about p,
+#testimonials p,
+#contact  {
+  font-family: 'hurin';
+  font-weight: 50;
+}
+
+#features h5,
+#about h5,
+#testimonials h5,
+#contact  {
+  font-family: 'hurin';
+}
+
+.about-me-btn {
+    background-color: gray;
+    border-color: gray;
+}
+.about-me-btn:hover {
+    background-color: rgb(26, 25, 25);
+    border-color: gray;
+}
+
+.message-btn {
+    background-color: gray;
+    border-color: gray;
+}
+.message-btn:hover {
+    background-color: rgb(26, 25, 25);
+    border-color: gray;
 }
 
 .feature-icon {
@@ -37,3 +114,12 @@
     object-fit: cover;
 }
 
+footer h5{
+    font-family: 'celinda';
+}
+footer li {
+    font-family: 'hurin';
+}
+footer p {
+    font-family: sans-serif;
+}

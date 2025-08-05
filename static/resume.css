@@ -4,3 +4,33 @@
     margin: 0 auto;
     max-width: 100%;
 }
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+}
+.move-down{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+@font-face {
+    font-family: 'celinda';
+    src: url('fonts/Celinda-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'mileast';
+    src: url('fonts/Mileast.otf') format('truetype');
+}
+
+h1 {
+    font-family: 'celinda';
+}
+h2 {
+    font-family: 'milesast';
+}
+li {
+    font-family: sans-serif;
+}
+p {
+    font-family: sans-serif;
+}

@@ -1,23 +1,31 @@
+
+@font-face {
+    font-family: 'celinda';
+    src: url('fonts/Celinda-Regular.otf') format('truetype');
+}
 h3 {
     text-align: center;
     margin-top: 100px;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'celinda';
     color: white;
     font-size: 3.5em;
     font-weight: 500;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
+
 body{
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
 }
 .cards-container {
     margin-top: 75px;
+    
 }
 .card {
     border-radius: 1rem;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
 .card-body {
-  padding: 1.5rem; /* Adjust as needed */
+  padding: 1.5rem; 
 }
 .card-footer {
   padding: 1rem;
@@ -26,4 +34,12 @@ body{
   padding: 1rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+.btn {
+  background-color: gray;
+  border-color: gray;
+}
+.btn:hover {
+  background-color: rgb(27, 27, 27);
+  border-color: rgb(27, 27, 27);
 }
