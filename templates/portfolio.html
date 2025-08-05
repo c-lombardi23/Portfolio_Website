@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-4">
+    <div class="row g-4">
+
+        <div class="col-md-4">
+        <div class="card h-100">
+            <a href="{{url_for('focal')}}">
+            <img src="static/focal_screenshot1.png" class="card-img-top" alt="Placeholder Screenshot">
+            </a>
+            <div class="card-body">
+            <h5 class="card-title">Other Project</h5>
+            <p class="card-text">
+                A short description of another project, demonstrating skills in data analysis, visualization, or machine learning with Python.
+            </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+            <a href="https://github.com/c-lombardi23/FOCAL" class="btn btn-primary">View</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="card h-100">
+            <a href="https://github.com/c-lombardi23/new_fit_physicist">
+            <img src="static/fit_physics_screenshot.png" class="card-img-top" alt="Fit Physicist Screenshot">
+            </a>
+            <div class="card-body">
+            <h5 class="card-title">Personal Training Website</h5>
+            <p class="card-text">
+                TheFitPhysicist is a Flask-based blog and portfolio web app with dynamic routing, blog post creation, contact forms, and SEO-friendly sitemap support.
+            </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+            <a href="https://github.com/c-lombardi23/new_fit_physicist" class="btn btn-primary">View</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="card h-100">
+            <a href="https://github.com/c-lombardi23/Asteroseismology">
+            <img src="static/periodogram.png" class="card-img-top" alt="Asteroseismology Screenshot">
+            </a>
+            <div class="card-body">
+            <h5 class="card-title">Asteroseismology</h5>
+            <p class="card-text">
+                My research investigates stellar oscillations and magnetic activity in solar-type stars, using power spectra to probe stellar interiors.
+            </p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+            <a href="https://github.com/c-lombardi23/Asteroseismology" class="btn btn-primary">View</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    {% endblock %}
