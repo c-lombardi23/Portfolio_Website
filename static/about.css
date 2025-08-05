@@ -1,0 +1,17 @@
+.custom-jumbotron {
+  background: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(4px);           
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin-top: 50px;
+}
+
+.custom-jumbotron h1 {
+  font-weight: 600;
+}
+
+.custom-jumbotron p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}

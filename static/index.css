@@ -1,6 +1,12 @@
 body {
   margin: 0;
-  background: white;
+  background: linear-gradient(
+    120deg, 
+    #2A7B9B 0%, 
+    #57C785 50%, 
+    #EDDD53 80%, 
+    white 100%
+  );
 }
 
 .angled-strip {
@@ -16,7 +22,6 @@ body {
     #EDDD53 80%, 
     white 100%
   );
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   z-index: -1;
 }
 
@@ -64,5 +69,21 @@ body {
   border-radius: 50%;
   z-index: 10;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #6c757d;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
 

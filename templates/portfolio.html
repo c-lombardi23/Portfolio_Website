@@ -2,14 +2,16 @@
 
 {% block head %}
 
-<link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='portfolio.css')}}">
 
 {% endblock %}
 
 {% block content %}
 
+<h3>Current Projects</h3>
+
 <div class="container my-4">
-    <div class="row g-4">
+    <div class="row g-4 cards-container">
 
         <div class="col-md-4">
         <div class="card h-100">
