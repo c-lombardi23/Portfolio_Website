@@ -66,6 +66,7 @@ nav li {
 #testimonials h2,
 #contact h2 {
   font-family: 'mileast', sans-serif;
+  text-align: center;
 }
 
 #features p,
@@ -74,6 +75,7 @@ nav li {
 #contact  {
   font-family: 'hurin';
   font-weight: 50;
+  text-align: center;
 }
 
 #features h5,
