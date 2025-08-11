@@ -40,3 +40,29 @@ li {
 p {
     font-family: sans-serif;
 }
+.download-resume-btn {
+    background-color: gray;
+    border-color: gray;
+    box-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px black;
+    color: white !important;
+}
+.download-resume-btn:hover {
+    background-color: rgb(26, 25, 25);
+    border-color: gray;
+}
+@media (max-width: 600px) {
+.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: gray;
+  border-color: gray;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 1px black;
+}
+.btn:hover {
+  background-color: rgb(27, 27, 27);
+  border-color: rgb(27, 27, 27);
+}
+}
