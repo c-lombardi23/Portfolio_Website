@@ -129,7 +129,7 @@ footer p {
     font-family: sans-serif;
     text-decoration: None;
 }
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .parallax {
     height: 70vh;               
     background-attachment: scroll; 
@@ -139,7 +139,7 @@ footer p {
     padding: 1rem;
   }
   .hero-section h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
   }
   .hero-section p {
@@ -163,7 +163,12 @@ footer p {
     padding: 12px 20px;
     font-size: 1rem;
   }
-
+ .about-btn:hover,
+ .project-btn:hover {
+    background-color: white;
+    color: black;
+    border-color: white; 
+}
   .feature-icon {
     font-size: 2rem;
     margin-bottom: 0.75rem;
@@ -174,6 +179,20 @@ footer p {
     width: 150px;
     height: 150px;
   }
+  #about .col-md-6:first-child {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+  }
+  .about-me-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    text-align: center;
+  }
 
   footer h5 {
     font-size: 1.2rem;
@@ -183,5 +202,8 @@ footer p {
   }
   footer p {
     font-size: 0.9rem;
+  }
+    .col-md-4.mb-3 .d-flex {
+    justify-content: center !important; 
   }
 }
