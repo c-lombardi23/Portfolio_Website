@@ -7,10 +7,10 @@
     background-size: cover;
 }
 nav p {
-    font-family: sans-serif;
+    font-family: 'hurin';
 }
 nav li {
-    font-family: sans-serif;
+    font-family: 'hurin';
     color: white;
 }
 
@@ -58,7 +58,7 @@ nav li {
 .project-btn:hover {
     background-color: white;
     color: black;
-    border-color: white; /* optional, if you want the border to stay white */
+    border-color: white; 
 }
 
 #features h2,
@@ -86,6 +86,8 @@ nav li {
 .about-me-btn {
     background-color: gray;
     border-color: gray;
+    box-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px black;
 }
 .about-me-btn:hover {
     background-color: rgb(26, 25, 25);
@@ -95,6 +97,8 @@ nav li {
 .message-btn {
     background-color: gray;
     border-color: gray;
+    box-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px black;
 }
 .message-btn:hover {
     background-color: rgb(26, 25, 25);
@@ -119,7 +123,9 @@ footer h5{
 }
 footer li {
     font-family: 'hurin';
+    text-decoration: None;
 }
 footer p {
     font-family: sans-serif;
+    text-decoration: None;
 }

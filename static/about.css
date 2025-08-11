@@ -1,10 +1,34 @@
+@font-face {
+    font-family: 'celinda';
+    src: url('fonts/Celinda-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'mileast';
+    src: url('fonts/Mileast.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'hurin';
+    src: url('fonts/HurinPersonalUseOnly-Regular.ttf') format('truetype');
+}
+
 .custom-jumbotron {
-  background: rgba(255, 255, 255, 0.5); 
+  background: rgba(255, 255, 255, 0.959); 
   backdrop-filter: blur(4px);           
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   color: gray;
-  margin-top: 50px;
+  margin-top: 50px;  
+}
+.container h1 {
+  font-family: 'celinda';
+}
+#about-me-text p {
+  font-family: 'hurin';
+}
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
 }
 
 .custom-jumbotron h1 {

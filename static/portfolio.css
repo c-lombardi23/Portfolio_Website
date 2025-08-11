@@ -3,6 +3,12 @@
     font-family: 'celinda';
     src: url('fonts/Celinda-Regular.otf') format('truetype');
 }
+
+@font-face {
+    font-family: 'hurin';
+    src: url('fonts/HurinPersonalUseOnly-Regular.ttf') format('truetype');
+}
+
 h3 {
     text-align: center;
     margin-top: 100px;
@@ -25,7 +31,16 @@ body{
     box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
 .card-body {
-  padding: 1.5rem; 
+  padding: 1.5rem;
+}
+.card-body h5 {
+  font-family: 'celinda';
+  text-align: center;
+  font-size: 1.5em;
+}
+.card-body p {
+  text-align: center;
+  font-family: sans-serif;
 }
 .card-footer {
   padding: 1rem;
@@ -38,8 +53,28 @@ body{
 .btn {
   background-color: gray;
   border-color: gray;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 1px black;
+
 }
 .btn:hover {
   background-color: rgb(27, 27, 27);
   border-color: rgb(27, 27, 27);
+}
+.mt-2 {
+  display: flex;
+  gap: 6px;          
+  align-items: center; 
+  flex-wrap: wrap;    
+} 
+.badge-icon {
+  vertical-align: center;
+  margin-right: 2px; 
+  border-radius: 4px;
+  margin-top: 2px;
+  height: 28px; 
+}
+
+.badge-icon:hover {
+    transform: scale(1.05); 
 }

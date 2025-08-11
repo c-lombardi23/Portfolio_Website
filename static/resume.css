@@ -11,6 +11,11 @@ body{
     margin-top: 100px;
     margin-bottom: 100px;
 }
+.container a {
+
+  color: darkgray;      
+  transition: color 0.3s;
+}
 
 @font-face {
     font-family: 'celinda';
@@ -27,6 +32,7 @@ h1 {
 }
 h2 {
     font-family: 'milesast';
+    font-weight: bold;
 }
 li {
     font-family: sans-serif;
