@@ -129,3 +129,59 @@ footer p {
     font-family: sans-serif;
     text-decoration: None;
 }
+@media (max-width: 600px) {
+  .parallax {
+    height: 70vh;               
+    background-attachment: scroll; 
+  }
+
+  .hero-section {
+    padding: 1rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  }
+  .hero-section p {
+    font-size: 1rem;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+  }
+  .hero-section a {
+    font-size: 1rem;
+  }
+
+  nav p, nav li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+
+ 
+  .about-btn,
+  .project-btn,
+  .about-me-btn,
+  .message-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+ 
+  .testimonial-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  footer h5 {
+    font-size: 1.2rem;
+  }
+  footer li {
+    font-size: 1rem;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+}

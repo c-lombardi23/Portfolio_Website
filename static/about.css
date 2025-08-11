@@ -39,3 +39,27 @@ body{
   font-size: 1.05rem;
   line-height: 1.7;
 }
+@media (max-width: 600px) {
+  .custom-jumbotron {
+    margin-top: 20px;       
+    padding: 20px 15px;     
+  }
+
+  .custom-jumbotron h1 {
+    font-size: 1.8rem;      
+    line-height: 1.2;
+  }
+
+  .custom-jumbotron p {
+    font-size: 1.2rem;      
+    line-height: 1.6;       
+  }
+
+  #about-me-text p {
+    font-size: 1.15rem;    
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+}
