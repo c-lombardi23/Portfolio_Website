@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename='blog.css')}}">
+<title>Articles</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container move-down p-4 bg-white rounded shadow-sm" style="max-width: 900px;">
+  <header class="mb-4">
+    <h1 class="display-1">All Blog Posts</h1>
+    {% for article in articles %}
+    <a id="link-title" href="{{url_for('view_article', article_id=article.id)}}">
+    <h4>{{ article.title }}</h4>
+    </a>
+    {% endfor %}
+  </header>
+</div>
+{% endblock %}

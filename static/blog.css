@@ -1,0 +1,35 @@
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+}
+@font-face {
+    font-family: 'celinda';
+    src: url('fonts/Celinda-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'mileast';
+    src: url('fonts/Mileast.otf') format('truetype');
+}
+
+.move-down{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+h1 {
+    text-align: center;
+    font-family: 'celinda';
+}
+h4 {
+    text-align: center;
+    font-family:sans-serif;
+    font-size: 2rem;
+    color: black;
+}
+#link-title {
+    text-decoration: none;
+    color: black; 
+    
+}
+#link-title :hover {
+    color: blue;
+}

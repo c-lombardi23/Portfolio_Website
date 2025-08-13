@@ -3,6 +3,8 @@ from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
 
+from models import db, Article
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -16,7 +18,24 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv("MAIL_DEFAULT_SENDER")
 app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 app.config['MAIL_DEBUG'] = True
 
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = os.getenv("SQLALCHEMY_TRACK_MODIFICATIONS")
+
 mail = Mail(app)
+
+db.init_app(app)
+
+with app.app_context():
+    db.create_all()
+
+    if Article.query.count() == 0:
+        sample_articles = [
+            Article(title="Welcome to Flask", content="This is your first article!"),
+            Article(title="SQLAlchemy is great", content="You can easily manage your database with SQLAlchemy."),
+            Article(title="SQLite Example", content="SQLite is perfect for small projects and prototyping.")
+        ]
+        db.session.bulk_save_objects(sample_articles)
+        db.session.commit()
 
 @app.context_processor
 def inject_request():
@@ -46,6 +65,15 @@ def contact():
 
     return render_template("index.html")
 
+@app.route("/blog")
+def blog():
+    articles = Article.query.all()
+    return render_template("blog.html", articles=articles)
+
+@app.route("/article/<int:article_id>")
+def view_article(article_id):
+    article = Article.query.get_or_404(article_id)
+    return render_template("article.html", article=article)
 
 @app.route("/")
 def index():

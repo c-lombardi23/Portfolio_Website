@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='article.css')}}">
+<title>View Article</title>
+{% endblock head %}
+
+{% block content %}
+<div class="container move-down p-4 bg-white rounded shadow-sm" style="max-width: 900px;">
+  <header class="mb-4">
+    <h1 class="display-4">{{ article.title }}</h1>
+  </header>
+<section class="mb-4">
+    <h2>Content</h2>
+    <p>{{ article.content }}</p>
+  </section>
+</div>
+{% endblock %}
