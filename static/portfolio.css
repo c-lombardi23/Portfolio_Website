@@ -59,6 +59,7 @@ body{
   border-color: gray;
   text-shadow: 1px 1px 1px black;
   box-shadow: 1px 1px 1px black;
+  font-family: sans-serif;
 }
 .btn:hover {
   background-color: rgb(27, 27, 27);

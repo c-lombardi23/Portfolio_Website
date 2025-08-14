@@ -2,7 +2,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{url_for('static', filename='article.css')}}">
-<title>View Article</title>
+{% block title %}{{ article.title }}{% endblock %}
 {% endblock head %}
 
 {% block content %}
@@ -12,7 +12,7 @@
   </header>
 <section class="mb-4">
     <h2>Content</h2>
-    <p>{{ article.content }}</p>
+    <p class="article-content">{{ article.content }}</p>
   </section>
 </div>
 {% endblock %}

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect, url_for
+from flask import Flask, render_template, request, flash, redirect, url_for, Response
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
@@ -28,15 +28,6 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-    if Article.query.count() == 0:
-        sample_articles = [
-            Article(title="Welcome to Flask", content="This is your first article!"),
-            Article(title="SQLAlchemy is great", content="You can easily manage your database with SQLAlchemy."),
-            Article(title="SQLite Example", content="SQLite is perfect for small projects and prototyping.")
-        ]
-        db.session.bulk_save_objects(sample_articles)
-        db.session.commit()
-
 @app.context_processor
 def inject_request():
     return dict(request=request)
@@ -64,6 +55,18 @@ def contact():
         return redirect(url_for("index"))
 
     return render_template("index.html")
+
+@app.route("/admin")
+def admin():
+    articles = Article.query.order_by(Article.id.desc()).all()
+    return render_template("admin.html", articles=articles)
+
+@app.route("/delete_article/<int:article_id>")
+def delete_article(article_id):
+    article = Article.query.get_or_404(article_id)
+    db.session.delete(article)
+    db.session.commit()
+    return redirect(url_for("admin"))
 
 @app.route("/blog")
 def blog():
@@ -98,6 +101,24 @@ def portfolio():
 @app.route("/resume")
 def resume():
     return render_template("resume.html")
+
+@app.route("/sitemap.xml", methods=["GET"])
+def sitemap():
+    pages = []
+
+    # Static pages
+    pages.append([url_for("index", _external=True)])
+    pages.append([url_for("about", _external=True)])
+    pages.append([url_for("resume", _external=True)])
+    pages.append([url_for("portfolio", _external=True)])
+    pages.append([url_for("projects", _external=True)])
+    pages.append([url_for("blog", _external=True)])
+
+    for article in Article.query.all():
+        pages.append([url_for("view_article", article_id=article.id, _external=True), article.updated_at.isoformat()])
+
+    sitemap_xml = render_template("sitemap_template.xml", pages=pages)
+    return Response(sitemap_xml, mimetype="application/xml")
 
 if __name__ == "__main__":
 

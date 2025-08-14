@@ -3,7 +3,7 @@
 {% block head %}
 
 <link rel="stylesheet" href="{{url_for('static', filename='about.css')}}">
-<title>About</title>
+{% block title %}About Me{% endblock %}
 {% endblock %}
 
 {% block content %}

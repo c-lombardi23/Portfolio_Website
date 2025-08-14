@@ -31,5 +31,11 @@ h4 {
     
 }
 #link-title :hover {
-    color: blue;
+    color: rgb(197, 194, 194);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

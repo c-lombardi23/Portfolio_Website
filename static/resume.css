@@ -46,13 +46,15 @@ p {
     box-shadow: 1px 1px 1px black;
     text-shadow: 1px 1px 1px black;
     color: white !important;
+    font-family: sans-serif;
 }
 .download-resume-btn:hover {
     background-color: rgb(26, 25, 25);
     border-color: gray;
 }
 @media (max-width: 600px) {
-.btn {
+
+    .btn {
   display: block;
   margin-left: auto;
   margin-right: auto;

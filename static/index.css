@@ -84,12 +84,16 @@ nav li {
 #contact  {
   font-family: 'hurin';
 }
+#features h3 {
+  padding-top: 20px;
+}
 
 .about-me-btn {
     background-color: gray;
     border-color: gray;
     box-shadow: 1px 1px 1px black;
     text-shadow: 1px 1px 1px black;
+    font-family: sans-serif;
 }
 .about-me-btn:hover {
     background-color: rgb(26, 25, 25);
@@ -101,6 +105,7 @@ nav li {
     border-color: gray;
     box-shadow: 1px 1px 1px black;
     text-shadow: 1px 1px 1px black;
+    font-family: sans-serif;
 }
 .message-btn:hover {
     background-color: rgb(26, 25, 25);
