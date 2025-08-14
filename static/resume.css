@@ -26,9 +26,20 @@ body{
     font-family: 'mileast';
     src: url('fonts/Mileast.otf') format('truetype');
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 h1 {
     font-family: 'celinda';
+    animation: fadeIn 2s cubic-bezier(0.65, 0, 0.35, 1) forwards; 
+
 }
 h2 {
     font-family: 'milesast';

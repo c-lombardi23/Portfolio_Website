@@ -12,6 +12,14 @@
     font-family: 'hurin';
     src: url('fonts/HurinPersonalUseOnly-Regular.ttf') format('truetype');
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .custom-jumbotron {
   background: rgba(255, 255, 255, 0.959); 
@@ -23,6 +31,8 @@
 }
 .container h1 {
   font-family: 'celinda';
+  animation: fadeIn 2s cubic-bezier(0.65, 0, 0.35, 1) forwards; 
+
 }
 #about-me-text p {
   font-family: 'hurin';
