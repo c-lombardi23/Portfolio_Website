@@ -7,6 +7,13 @@
   }
 }
 
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 0.5; transform: translateY(0); }
+    50% { opacity: 0.7; transform: translateY(0); }   
+    80% { opacity: 1; transform: translateY(0); }  
+    100% { opacity: 0; transform: translateY(-10px); } 
+}
 
 .parallax {
     height: 100vh;
@@ -63,7 +70,18 @@ nav li {
     font-family: 'hurin';
     src: url('fonts/HurinPersonalUseOnly-Regular.ttf') format('truetype');
 }
-
+.alert {
+    font-family: 'hurin';
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-bottom: 80px;
+    border: none;
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+    background: none;
+    color: white;
+    text-align: center;
+}
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url('/api/placeholder/1920/1080') center/cover no-repeat;
