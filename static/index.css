@@ -73,7 +73,6 @@ nav li {
 .alert {
     font-family: 'hurin';
     font-size: 1.3rem;
-    font-weight: bold;
     padding-bottom: 80px;
     border: none;
     opacity: 0;
@@ -149,7 +148,7 @@ nav li {
 #about h5,
 #testimonials h5,
 #contact  {
-  font-family: 'hurin';
+  font-family: sans-serif;
 }
 #features h3 {
   padding-top: 20px;
