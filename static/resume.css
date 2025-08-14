@@ -54,7 +54,7 @@ p {
 }
 @media (max-width: 600px) {
 
-    .btn {
+.btn {
   display: block;
   margin-left: auto;
   margin-right: auto;

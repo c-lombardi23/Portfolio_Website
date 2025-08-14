@@ -24,6 +24,23 @@
 footer {
     margin-top: auto; 
 }
+.navbar a {
+  position: relative;
+}
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #d6d6d3;
+  transition: width 0.3s ease;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+
 nav p {
     font-family: 'hurin';
 }
@@ -153,15 +170,35 @@ nav li {
 
 footer h5{
     font-family: 'celinda';
+    color: lightgray;
 }
-footer li {
+footer li a {
     font-family: 'hurin';
     text-decoration: None;
+    color: lightgray;
+}
+footer li a {
+  position: relative;
+}
+footer li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #d6d6d3;
+  transition: width 0.3s ease;
+}
+footer li a:hover::after {
+  width: 100%;
 }
 footer p {
     font-family: sans-serif;
     text-decoration: None;
+    color: lightgray;
 }
+
 @media screen and (max-width: 600px) {
   .parallax {
     height: 70vh;               
