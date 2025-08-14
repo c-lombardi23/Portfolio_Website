@@ -107,15 +107,15 @@ def sitemap():
     pages = []
 
     # Static pages
-    pages.append([url_for("index", _external=True)])
-    pages.append([url_for("about", _external=True)])
-    pages.append([url_for("resume", _external=True)])
-    pages.append([url_for("portfolio", _external=True)])
-    pages.append([url_for("projects", _external=True)])
-    pages.append([url_for("blog", _external=True)])
+    pages.append(url_for("index", _external=True))
+    pages.append(url_for("about", _external=True))
+    pages.append(url_for("resume", _external=True))
+    pages.append(url_for("portfolio", _external=True))
+    pages.append(url_for("projects", _external=True))
+    pages.append(url_for("blog", _external=True))
 
     for article in Article.query.all():
-        pages.append([url_for("view_article", article_id=article.id, _external=True), article.updated_at.isoformat()])
+        pages.append(url_for("view_article", article_id=article.id, _external=True))
 
     sitemap_xml = render_template("sitemap_template.xml", pages=pages)
     return Response(sitemap_xml, mimetype="application/xml")
