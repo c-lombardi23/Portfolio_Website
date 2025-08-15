@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block head %}
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 <link rel="stylesheet" href="{{url_for('static', filename='portfolio.css')}}">
 {% block title %}Portfolio{% endblock %}
 {% endblock %}
 
 {% block content %}
 
-<h3>Current Projects</h3>
+<h3 class="animate__animated animate__lightSpeedInRight">Current Projects</h3>
 
 <div class="container my-4">
     <div class="row g-4 cards-container">

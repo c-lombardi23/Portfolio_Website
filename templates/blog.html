@@ -10,7 +10,7 @@
 
 <div class="container move-down p-4 bg-white rounded shadow-sm" style="max-width: 900px;">
   <header class="mb-4">
-    <h1 class="display-1">All Blog Posts</h1>
+    <h1 class="display-1 animate__animated animate__lightSpeedInRight">All Blog Posts</h1>
     {% for article in articles %}
     <a id="link-title" href="{{url_for('view_article', article_id=article.id)}}">
     <h4>{{ article.title }}</h4>
