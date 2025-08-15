@@ -88,6 +88,7 @@ nav li {
     color: white;
 }
 .hero-section h1 {
+   position: relative;
     font-weight: bold;
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
     font-family:'celinda', sans-serif;
@@ -95,10 +96,30 @@ nav li {
     font-size: 5.5em; 
 
 }
-.hero-section h1:hover {
-    transform: scale(1.1)
-
+.hero-section h1::after,
+.hero-section h1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #f5f2f2, #555555);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
 }
+
+.hero-section h1::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hero-section h1:hover::after,
+.hero-section h1:hover::before {
+  transform: scaleX(1);
+}
+
 
 .hero-section p {
    opacity: 0;
@@ -220,6 +241,9 @@ footer p {
     font-family: sans-serif;
     text-decoration: None;
     color: lightgray;
+}
+#about-footer {
+  font-style: italic;
 }
 
 @media screen and (max-width: 600px) {
