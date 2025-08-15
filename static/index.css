@@ -31,6 +31,13 @@
 footer {
     margin-top: auto; 
 }
+.navbar-brand {
+  font-family: 'hurin', sans-serif;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #d3ec42);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .navbar a {
   position: relative;
 }
@@ -49,10 +56,10 @@ footer {
 }
 
 nav p {
-    font-family: 'hurin';
+    font-family: 'hurin', sans-serif;
 }
 nav li {
-    font-family: 'hurin';
+    font-family: 'hurin', sans-serif;
     color: white;
 }
 
@@ -71,7 +78,7 @@ nav li {
     src: url('fonts/HurinPersonalUseOnly-Regular.ttf') format('truetype');
 }
 .alert {
-    font-family: 'hurin';
+    font-family: 'hurin', sans-serif;
     font-size: 1.3rem;
     padding-bottom: 80px;
     border: none;
@@ -123,7 +130,7 @@ nav li {
 
 .hero-section p {
    opacity: 0;
-    font-family: 'hurin';
+    font-family: 'hurin', sans-serif;
     text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
     animation: fadeIn 2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     animation-delay: 0.5s;
@@ -131,7 +138,7 @@ nav li {
 }
 .hero-section a {
     opacity: 0;
-    font-family: 'hurin';
+    font-family: 'hurin', sans-serif;
     animation: fadeIn 2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     animation-delay: 1s;
 }
@@ -180,7 +187,7 @@ nav li {
 #about p,
 #testimonials p,
 #contact  {
-  font-family: 'hurin';
+  font-family: 'hurin', sans-serif;
   font-weight: 50;
   text-align: center;
 }
@@ -251,11 +258,11 @@ nav li {
 }
 
 footer h5{
-    font-family: 'celinda';
+    font-family: 'celinda', sans-serif;
     color: lightgray;
 }
 footer li a {
-    font-family: 'hurin';
+    font-family: 'hurin', sans-serif;
     text-decoration: None;
     color: lightgray;
 }
