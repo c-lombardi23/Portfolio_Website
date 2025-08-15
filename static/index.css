@@ -31,10 +31,13 @@
 footer {
     margin-top: auto; 
 }
+.navbar {
+  opacity: 0.8;
+}
 .navbar-brand {
   font-family: 'hurin', sans-serif;
   font-weight: 700;
-  background: linear-gradient(90deg, #ffffff, #d3ec42);
+  background: linear-gradient(90deg, #ffffff, #8d8d8b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -279,21 +282,7 @@ footer li a::after {
   background: #d6d6d3;
   transition: width 0.3s ease;
 }
-.linkedin-btn:hover {
-  background: #0A66C2; /* LinkedIn blue */
-}
 
-.github-btn:hover {
-  background: #333; /* GitHub dark gray */
-}
-
-.facebook-btn:hover {
-  background: #1877F2; /* Facebook blue */
-}
-
-.instagram-btn:hover {
-  background: #E1306C; /* Instagram pink */
-}
 footer li a:hover::after {
   width: 100%;
 }
