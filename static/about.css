@@ -22,8 +22,8 @@
 }
 
 .custom-jumbotron {
-  background: rgba(255, 255, 255, 0.959); 
-  backdrop-filter: blur(4px);           
+  background: rgba(255, 255, 255, 0.9); 
+  backdrop-filter: blur(15px);           
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   color: gray;
@@ -38,7 +38,7 @@
   font-family: 'hurin';
 }
 body{
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 .skill-title {
   padding-top: 15px;
