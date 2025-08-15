@@ -242,6 +242,26 @@ footer p {
     text-decoration: None;
     color: lightgray;
 }
+
+.connect a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;           
+    height: 3.5rem;
+    font-size: 1.75rem;      
+    border: 1px solid #fff;  
+    border-radius: 50%;      
+    color: #fff;            
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.connect a:hover {
+    background-color: #8f8d8d;  
+    color: #000;             
+    transform: scale(1.1);  
+}
+
 #about-footer {
   font-style: italic;
 }
