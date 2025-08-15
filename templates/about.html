@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 
 {% block head %}
-
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="{{url_for('static', filename='about.css')}}">
 {% block title %}About Me{% endblock %}
 {% endblock %}
@@ -46,25 +46,25 @@
       </div>
       <h2 class="text-center mb-5 skill-title">Programming Languages</h2>
       <div class="row justify-content-center g-4">
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
           <div class="skill-card text-center p-3 shadow-sm rounded">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo" class="skill-icon">
             <h5 class="mt-2">Python</h5>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
           <div class="skill-card text-center p-3 shadow-sm rounded">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C Logo" class="skill-icon">
             <h5 class="mt-2">C</h5>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
             <h5 class="mt-2">C++</h5>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="250">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <img 
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" 
@@ -76,14 +76,14 @@
         </div>
        <h2 class="text-center mb-5 skill-title">Machine Learning Skills</h2>
        <div class="row justify-content-center g-4">
-       <div class="col-sm-6 col-md-3">
+       <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" 
                       alt="TensorFlow" >            
               <h5 class="mt-2">TensorFlow</h5>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="350">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <svg role="img" viewBox="0 0 24 24" fill="#f48120" xmlns="http://www.w3.org/2000/svg">
                     <title>XGBoost</title>
@@ -92,14 +92,14 @@
               <h5 class="mt-2">XGBoost</h5>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" 
                       alt="Scikit-Learn">            
               <h5 class="mt-2">Scikit-Learn</h5>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="450">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <img 
                       src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mlflow.svg" 
@@ -111,7 +111,7 @@
        </div>
         <h2 class="text-center mb-5 skill-title">Operating Systems</h2>
         <div class="row justify-content-center g-4">
-       <div class="col-sm-6 col-md-4">
+       <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="500">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/120px-Windows_logo_-_2012.svg.png"
@@ -120,7 +120,7 @@
               <h5 class="mt-2">Windows</h5>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="550">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <img
                       src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
@@ -129,7 +129,7 @@
               <h5 class="mt-2">Mac OS</h5>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="600">
           <div class="skill-card text-center p-3 shadow-sm rounded">
               <img
                    <img
@@ -150,6 +150,13 @@
   max: 40, 
   speed: 400, 
 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, 
+    once: false    
+  });
 </script>
 
 {% endblock %}
