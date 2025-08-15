@@ -33,7 +33,7 @@ h1 {
 h4 {
     text-align: center;
     font-family:sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
 }
 #link-title {
@@ -43,4 +43,12 @@ h4 {
 }
 #link-title :hover {
     color: rgb(197, 194, 194);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 96%;
+  }
+
+
 }

@@ -64,6 +64,9 @@ p {
     border-color: gray;
 }
 @media (max-width: 600px) {
+  .container {
+    width: 96%;
+  }
 
 .btn {
   display: block;
