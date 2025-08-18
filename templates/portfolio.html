@@ -109,7 +109,7 @@
         </div>
         </div>
 
-        <div class="col-md-3 offset-md-4">
+        <div class="col-md-3 offset-md-4 card-move-right">
         <div class="card h-100">
             <a href="https://github.com/c-lombardi23/Portfolio_Website">
             <img src="static/images/portfolio.png" class="card-img-top" alt="portfolio">
@@ -148,5 +148,14 @@
 
     cards.forEach(card => observer.observe(card));
   </script>
+  <script>
+VANTA.CELLS({
+  el: "body",
+  backgroundColor: 0x0,
+  color1: 0x20202,
+  color2: 0x7d7d77,
+  wingSpan: 20
+});
+</script>
 
     {% endblock %}
