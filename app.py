@@ -1,9 +1,23 @@
-from flask import Flask, render_template, request, flash, redirect, url_for, Response
+from flask import Flask, render_template, request, flash, redirect, url_for, Response, send_file
 from flask_mail import Mail, Message
+from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
 from dotenv import load_dotenv
 import os
+import time
 
 from models import db, Article
+from prometheus_setup import (
+    VISITS,
+    MESSAGES,
+    RESUME_CLICKS,
+    PORTFOLIO_VISITS,
+    ABOUT_VISITS,
+    RESUME_VISITS,
+    BLOG_VISITS,
+    EXTERNAL_CLICKS,
+    HTTP_RESPONSES,
+    REQUEST_LATENCY
+)
 
 load_dotenv()
 
@@ -32,6 +46,10 @@ with app.app_context():
 def inject_request():
     return dict(request=request)
 
+@app.before_request
+def start_timer():
+    request.start_time = time.time()
+
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
@@ -49,6 +67,7 @@ def contact():
         try:
             mail.send(msg)
             flash("Message sent successfully!", "success")
+            MESSAGES.inc() # increment total messages on prometheus
         except Exception as e:
             print(e)
             flash("Error sending message. Try again later.", "danger")
@@ -70,6 +89,7 @@ def delete_article(article_id):
 
 @app.route("/blog")
 def blog():
+    BLOG_VISITS.inc()
     articles = Article.query.all()
     return render_template("blog.html", articles=articles)
 
@@ -80,27 +100,52 @@ def view_article(article_id):
 
 @app.route("/")
 def index():
+    VISITS.inc() # increment total visits on prometheus
     return render_template('index.html')
-
-@app.route("/projects")
-def projects():
-    return 'Project Page'
 
 @app.route("/about")
 def about():
+    ABOUT_VISITS.inc()
     return render_template('about.html')
-
-@app.route("/focal")
-def focal():
-    return render_template('focal.html')
 
 @app.route("/portfolio")
 def portfolio():
+    PORTFOLIO_VISITS.inc()
     return render_template('portfolio.html')
 
 @app.route("/resume")
 def resume():
+    RESUME_VISITS.inc()
     return render_template("resume.html")
+
+@app.route("/download_resume")
+def download_resume():
+    RESUME_CLICKS.inc()
+    return send_file("static/lombardi_resume_updated.pdf", as_attachment=True)
+
+@app.route("/track/external_click", methods=["POST"])
+def track_external_click():
+    data = request.get_json()
+    url = data.get("url")
+    if url:
+        EXTERNAL_CLICKS.labels(link=url).inc()
+    return Response(status=204)
+
+@app.route("/metrics")
+def metrics():
+    return Response(generate_latest(), mimetype=CONTENT_TYPE_LATEST)
+
+@app.after_request
+def track_http_response(response):
+    HTTP_RESPONSES.labels(method=request.method, status=str(response.status_code)).inc()
+    return response
+
+@app.after_request
+def track_request_latency(response):
+    latency = time.time() - request.start_time
+    REQUEST_LATENCY.labels(method=request.method, endpoint=request.path).observe(latency)
+    return response
+
 
 @app.route("/sitemap.xml", methods=["GET"])
 def sitemap():
