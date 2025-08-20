@@ -138,10 +138,6 @@ def metrics():
 @app.after_request
 def track_http_response(response):
     HTTP_RESPONSES.labels(method=request.method, status=str(response.status_code)).inc()
-    return response
-
-@app.after_request
-def track_request_latency(response):
     latency = time.time() - request.start_time
     REQUEST_LATENCY.labels(method=request.method, endpoint=request.path).observe(latency)
     return response
