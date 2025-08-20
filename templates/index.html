@@ -92,7 +92,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6" data-aos="fade-up">
-                <img src="static/images/headshot.jpg" alt="About Us" class="img-fluid rounded" width="300px">
+                <img src="{{url_for('static', filename='images/headshot.jpg')}}" alt="About Us" class="img-fluid rounded" width="300px">
             </div>
             <div class="col-md-6" data-aos="fade-up">
                 <h2>About Me</h2>
@@ -115,7 +115,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <a href="https://github.com/c-lombardi23/FOCAL" class="track-link">
-                        <img src="static/images/machine_learning.png" class="testimonial-img mb-3" alt="Client 1">
+                        <img src="{{url_for('static', filename='images/machine_learning.png')}}" class="testimonial-img mb-3" alt="Client 1">
                         </a>
                         <p class="card-text">Machine learning pipeline for fiber optic cleaves</p>
                         <h5 class="card-title">FOCAL</h5>
@@ -127,7 +127,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <a href="https://github.com/c-lombardi23/new_fit_physicist" class="track-link">
-                        <img src="static/images/atom_icon2.png" class="testimonial-img mb-3" alt="Client 2">
+                        <img src="{{url_for('static', filename='images/atom_icon2.png')}}" class="testimonial-img mb-3" alt="Client 2">
                         </a>
                         <p class="card-text">Flask built dynamic blog website</p>
                         <h5 class="card-title">Fitness Blog</h5>
@@ -139,7 +139,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <a href="https://github.com/c-lombardi23/Asteroseismology" class="track-link">
-                        <img src="static/images/astero.png" class="testimonial-img mb-3" alt="Client 3">
+                        <img src="{{url_for('static', filename='images/astero.png')}}" class="testimonial-img mb-3" alt="Client 3">
                         </a>
                         <p class="card-text">Current research project on solar-type stars</p>
                         <h5 class="card-title">Asteroseismology Research</h5>
