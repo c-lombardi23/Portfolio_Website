@@ -121,7 +121,7 @@ def resume():
 @app.route("/download_resume")
 def download_resume():
     RESUME_CLICKS.inc()
-    return send_file("static/lombardi_resume_updated.pdf", as_attachment=True)
+    return send_file("static/Lombardi_Christopher_J.pdf", as_attachment=True)
 
 @app.route("/track/external_click", methods=["POST"])
 def track_external_click():
